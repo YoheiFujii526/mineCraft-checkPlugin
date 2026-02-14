@@ -1,0 +1,16 @@
+name: check
+version: '1.0-SNAPSHOT'
+main: me.fujii.check.ItemChecklistPlugin
+api-version: '1.21'
+
+commands:
+  checklist:
+    description: Open item checklist GUI
+    usage: /checklist [reset|reload]
+    aliases: [icl]
+
+permissions:
+  itemchecklist.use:
+    default: true
+  itemchecklist.admin:
+    default: op

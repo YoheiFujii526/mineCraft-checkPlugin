@@ -1,0 +1,69 @@
+[04:30:11] [ServerMain/INFO]: [bootstrap] Running Java 21 (OpenJDK 64-Bit Server VM 21.0.9+10-LTS; Eclipse Adoptium Temurin-21.0.9+10) on Windows 11 10.0 (amd64)
+[04:30:11] [ServerMain/INFO]: [bootstrap] Loading Paper 1.21.11-69-main@94d0c97 (2025-12-30T20:33:30Z) for Minecraft 1.21.11
+[04:30:12] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
+[04:30:12] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Remapping plugin 'C:\Users\youhei\IdeaProjects\check\build\libs\check-1.0-SNAPSHOT.jar'...
+[04:30:13] [Paper Plugin Remapper Thread - 2/INFO]: [PluginRemapper] Done remapping plugin 'C:\Users\youhei\IdeaProjects\check\build\libs\check-1.0-SNAPSHOT.jar' in 409ms.
+[04:30:13] [ServerMain/INFO]: [PluginInitializerManager] Initialized 1 plugin
+[04:30:13] [ServerMain/INFO]: [PluginInitializerManager] Bukkit plugins (1):
+ - check (1.0-SNAPSHOT)
+[04:30:18] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, profilesHost=https://api.mojang.com, name=PROD]
+[04:30:20] [ServerMain/INFO]: Loaded 1470 recipes
+[04:30:20] [ServerMain/INFO]: Loaded 1584 advancements
+[04:30:20] [ServerMain/INFO]: [ca.spottedleaf.dataconverter.minecraft.datatypes.MCTypeRegistry] Initialising converters for DataConverter...
+[04:30:20] [ServerMain/INFO]: [ca.spottedleaf.dataconverter.minecraft.datatypes.MCTypeRegistry] Finished initialising converters for DataConverter in 304.0ms
+[04:30:20] [Server thread/INFO]: Starting minecraft server version 1.21.11
+[04:30:20] [Server thread/INFO]: Loading properties
+[04:30:20] [Server thread/INFO]: This server is running Paper version 1.21.11-69-main@94d0c97 (2025-12-30T20:33:30Z) (Implementing API version 1.21.11-R0.1-SNAPSHOT)
+[04:30:20] [Server thread/INFO]: [spark] This server bundles the spark profiler. For more information please visit https://docs.papermc.io/paper/profiling
+[04:30:20] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[04:30:20] [Server thread/INFO]: Using 4 threads for Netty based IO
+[04:30:21] [Server thread/INFO]: [MoonriseCommon] Paper is using 3 worker threads, 1 I/O threads
+[04:30:21] [Server thread/INFO]: Default game type: SURVIVAL
+[04:30:21] [Server thread/INFO]: Generating keypair
+[04:30:21] [Server thread/INFO]: Starting Minecraft server on *:25565
+[04:30:21] [Server thread/INFO]: Paper: Using Java compression from Velocity.
+[04:30:21] [Server thread/INFO]: Paper: Using Java cipher from Velocity.
+[04:30:21] [Server thread/INFO]: [check] Loading server plugin check v1.0-SNAPSHOT
+[04:30:21] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[04:30:21] [Server thread/INFO]: Preparing level "world"
+[04:30:22] [Server thread/INFO]: Loading 0 persistent chunks for world 'minecraft:overworld'...
+[04:30:22] [Server thread/INFO]: Prepared spawn area in 3 ms
+[04:30:22] [Server thread/INFO]: Loading 0 persistent chunks for world 'minecraft:the_nether'...
+[04:30:22] [Server thread/INFO]: Prepared spawn area in 1 ms
+[04:30:22] [Server thread/INFO]: Loading 0 persistent chunks for world 'minecraft:the_end'...
+[04:30:22] [Server thread/INFO]: Prepared spawn area in 1 ms
+[04:30:22] [Server thread/INFO]: Done preparing level "world" (0.517s)
+[04:30:22] [Server thread/INFO]: [check] Enabling check v1.0-SNAPSHOT
+[04:30:22] [Server thread/INFO]: [check] ItemChecklist enabled!
+[04:30:22] [Server thread/INFO]: [spark] Starting background profiler...
+[04:30:22] [Server thread/INFO]: [spark] The async-profiler engine is not supported for your os/arch (windows11/amd64), so the built-in Java engine will be used instead.
+[04:30:22] [Server thread/INFO]: Running delayed init tasks
+[04:30:22] [Server thread/INFO]: Done (11.561s)! For help, type "help"
+[04:30:56] [User Authenticator #0/INFO]: UUID of player YoSayTati is e8228b38-d83a-4f47-9216-d0a686a583d5
+[04:30:58] [Server thread/INFO]: YoSayTati joined the game
+[04:30:58] [Server thread/INFO]: YoSayTati[/127.0.0.1:59861] logged in with entity id 79 at ([world]-116.82105828704326, 75.0, 161.54496652474114)
+[04:31:07] [Server thread/INFO]: YoSayTati issued server command: /check:checklist
+[04:31:48] [Server thread/INFO]: YoSayTati has made the advancement [Monster Hunter]
+[04:36:03] [Server thread/INFO]: YoSayTati issued server command: /kill @e[family=mob
+[04:36:19] [Server thread/INFO]: YoSayTati issued server command: /kill @e[type=!player]
+[04:36:19] [Server thread/INFO]: Villager Villager['Villager'/159, uuid='522c5b70-e1a3-40c4-b2db-6ef954f621f6', l='ServerLevel[world]', x=8.50, y=83.00, z=158.50, cpos=[0, 9], tl=6344, v=true] died, message: 'Villager was killed'
+[04:36:19] [Server thread/INFO]: Villager Villager['Nitwit'/376, uuid='30940670-29d6-4588-83c4-78000cb591da', l='ServerLevel[world]', x=-200.37, y=95.00, z=386.28, cpos=[-13, 24], tl=0, v=true] died, message: 'Nitwit was killed'
+[04:36:19] [Server thread/INFO]: Villager Villager['Villager'/493, uuid='501080a9-2936-4bb4-ad97-0b756e4642a0', l='ServerLevel[world]', x=-168.37, y=65.00, z=413.28, cpos=[-11, 25], tl=0, v=true] died, message: 'Villager was killed'
+[04:36:19] [Server thread/INFO]: Villager Villager['Nitwit'/378, uuid='2499e68d-5fb3-4c46-b30f-13af0d62da36', l='ServerLevel[world]', x=-205.28, y=95.00, z=385.63, cpos=[-13, 24], tl=0, v=true] died, message: 'Nitwit was killed'
+[04:36:19] [Server thread/INFO]: Villager Villager['Leatherworker'/183, uuid='9f600445-aafa-4a29-b55d-f35d4c4a7201', l='ServerLevel[world]', x=26.32, y=64.56, z=228.52, cpos=[1, 14], tl=6320, v=true] died, message: 'Leatherworker was killed'
+[04:36:19] [Server thread/INFO]: Villager Villager['Villager'/374, uuid='0a4c1888-539c-46ba-ac3c-ee5ceea8f6e8', l='ServerLevel[world]', x=-246.28, y=102.00, z=393.63, cpos=[-16, 24], tl=0, v=true] died, message: 'Villager was killed'
+[04:36:19] [Server thread/INFO]: Villager Villager['Leatherworker'/219, uuid='4e614616-644a-470e-ab38-230818a64782', l='ServerLevel[world]', x=25.50, y=64.00, z=240.50, cpos=[1, 15], tl=6309, v=true] died, message: 'Leatherworker was killed'
+[04:36:19] [Server thread/INFO]: Villager Villager['Leatherworker'/221, uuid='2cc17140-cd36-41f9-ae43-4cb1f3827140', l='ServerLevel[world]', x=24.50, y=64.00, z=229.50, cpos=[1, 14], tl=5887, v=true] died, message: 'Leatherworker was killed'
+[04:36:19] [Server thread/INFO]: Villager Villager['Villager'/494, uuid='ee42c031-954e-4682-b8f4-27f0a4e397e8', l='ServerLevel[world]', x=-221.37, y=65.00, z=412.93, cpos=[-14, 25], tl=0, v=true] died, message: 'Villager was killed'
+[04:36:19] [Server thread/INFO]: Villager Villager['Leatherworker'/202, uuid='aa8df9f1-2327-4544-86ef-0039df81595c', l='ServerLevel[world]', x=43.50, y=71.00, z=218.50, cpos=[2, 13], tl=3759, v=true] died, message: 'Leatherworker was killed'
+[04:36:19] [Server thread/INFO]: Villager Villager['Villager'/379, uuid='98b9398f-df17-4db7-8376-29341e2efc0a', l='ServerLevel[world]', x=-200.37, y=95.00, z=391.28, cpos=[-13, 24], tl=0, v=true] died, message: 'Villager was killed'
+[04:36:19] [Server thread/INFO]: [YoSayTati: Killed 267 entities]
+[04:36:26] [Server thread/INFO]: YoSayTati issued server command: /time set day
+[04:36:26] [Server thread/INFO]: [YoSayTati: Set the time to 1000]
+[04:37:12] [Server thread/INFO]: YoSayTati issued server command: /gamemode survival
+[04:37:12] [Server thread/INFO]: [YoSayTati: Set own game mode to Survival Mode]
+[04:37:14] [Server thread/INFO]: YoSayTati fell from a high place
+[04:37:27] [Server thread/INFO]: YoSayTati issued server command: /gamemode creative
+[04:37:27] [Server thread/INFO]: [YoSayTati: Set own game mode to Creative Mode]
+[04:39:55] [Server thread/INFO]: YoSayTati lost connection: Disconnected
+[04:39:55] [Server thread/INFO]: YoSayTati left the game
