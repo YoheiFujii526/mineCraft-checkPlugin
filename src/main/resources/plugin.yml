@@ -35,6 +35,6 @@ permissions:
   itemchecklist.use:
     default: true
   itemchecklist.admin:
-    default: op
+    default: true
   itemchecklist.cleanup:
-    default: op
+    default: true
