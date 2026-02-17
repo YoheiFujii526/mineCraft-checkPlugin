@@ -9,8 +9,32 @@ commands:
     usage: /checklist [reset|reload]
     aliases: [icl]
 
+  checklistcleanup:
+    description: Remove checklist marks from items
+    usage: /checklistcleanup [loaded]
+    permission: itemchecklist.cleanup
+
+  checklistdatarewrite:
+    description: Rewrite checklist internal data (normalize PDC/Lore)
+    usage: /checklistdatarewrite [hand|open|loaded]
+    permission: itemchecklist.admin
+    aliases: [icrewrite]
+
+  checklistdatareset:
+    description: Reset checklist internal data (remove PDC/Lore for stacking)
+    usage: /checklistdatareset [hand|open|loaded]
+    permission: itemchecklist.admin
+    aliases: [icreset]
+
+  testmark:
+    description: Prefix check mark to item in hand (test)
+    usage: /testmark
+    permission: itemchecklist.admin
+
 permissions:
   itemchecklist.use:
     default: true
   itemchecklist.admin:
+    default: op
+  itemchecklist.cleanup:
     default: op

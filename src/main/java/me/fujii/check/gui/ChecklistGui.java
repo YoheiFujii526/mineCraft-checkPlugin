@@ -41,7 +41,6 @@ public final class ChecklistGui implements Listener {
     private final ChecklistStore store;
 
     private final List<Material> allItems;
-    private final ItemChecklistTagger tagger;
 
     public static final class ChecklistHolder implements InventoryHolder {
         private final int page;
@@ -50,10 +49,9 @@ public final class ChecklistGui implements Listener {
         @Override public org.bukkit.inventory.Inventory getInventory() { return null; } // 使わない
     }
 
-    public ChecklistGui(JavaPlugin plugin, ChecklistStore store, ItemChecklistTagger tagger) {
+    public ChecklistGui(JavaPlugin plugin, ChecklistStore store) {
         this.plugin = plugin;
         this.store = store;
-        this.tagger = tagger;
 
         this.allItems = new ArrayList<>();
         for (Material m : Material.values()) {
@@ -148,11 +146,6 @@ public final class ChecklistGui implements Listener {
             Material m = allItems.get(index);
             store.toggle(m);
             store.save();
-
-            Bukkit.getScheduler().runTask(plugin, () -> {
-                tagger.applyToInventory(player.getInventory());
-                player.updateInventory();
-            });
 
             open(player, page);
         }

@@ -1,68 +1,49 @@
 package me.fujii.check.listener;
 
+import me.fujii.check.data.ChecklistStore;
 import me.fujii.check.util.ItemChecklistTagger;
 import org.bukkit.Bukkit;
+import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerItemHeldEvent;
 import org.bukkit.event.entity.EntityPickupItemEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryDragEvent;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class PlayerInventoryTagListener implements Listener {
 
     private final JavaPlugin plugin;
-    private final ItemChecklistTagger tagger;
+    private final ChecklistStore store;
 
-    public PlayerInventoryTagListener(JavaPlugin plugin, ItemChecklistTagger tagger) {
+    public PlayerInventoryTagListener(JavaPlugin plugin, ChecklistStore store) {
         this.plugin = plugin;
-        this.tagger = tagger;
+        this.store = store;
     }
 
-    // “操作直後”だとまだ反映されてないことがあるので 1tick 遅らせて更新する
-    private void applyLater(Player player) {
-        new BukkitRunnable() {
-            @Override
-            public void run() {
-                tagger.applyToInventory(player.getInventory());
-            }
-        }.runTask(plugin);
-    }
-
-    @EventHandler
+    // サーバー参加時に一度適用（保険）
+    @EventHandler(priority = EventPriority.MONITOR)
     public void onJoin(PlayerJoinEvent e) {
-        Bukkit.getScheduler().runTask(plugin, () -> {
-            tagger.applyToInventory(e.getPlayer().getInventory());
+        Player p = e.getPlayer();
+        plugin.getServer().getScheduler().runTask(plugin, () -> {
         });
     }
 
     @EventHandler(ignoreCancelled = true)
-    public void onClick(InventoryClickEvent e) {
-        if (e.getWhoClicked() instanceof Player player) {
-            applyLater(player);
-        }
-    }
-
-    @EventHandler(ignoreCancelled = true)
-    public void onDrag(InventoryDragEvent e) {
-        if (e.getWhoClicked() instanceof Player player) {
-            applyLater(player);
-        }
-    }
-
-    @EventHandler(ignoreCancelled = true)
     public void onPickup(EntityPickupItemEvent e) {
-        if (e.getEntity() instanceof Player player) {
-            applyLater(player);
-        }
-    }
+        if (!(e.getEntity() instanceof Player)) return;
 
-    @EventHandler
-    public void onHeld(PlayerItemHeldEvent e) {
-        applyLater(e.getPlayer());
+        ItemStack stack = e.getItem().getItemStack();
+        if (stack == null) return;
+
+        Material type = stack.getType();
+        if (type == Material.AIR) return;
+        if (!type.isItem()) return;
     }
 }
